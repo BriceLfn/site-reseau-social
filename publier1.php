@@ -33,7 +33,7 @@ try{
 		//$sql = $bdd->query('INSERT INTO Publication VALUES("'.mysql_escape_string($_POST['Auteur']).'", "'.mysql_escape_string($_POST['Publication']).'", "'.date("Y-m-d H:i:s").'")');
 		$auteur = $_POST['Auteur'];
   		$texte = $_POST['Publication'];
-  		$DatePublication = date("Y-m-d");
+  		$DatePublication = date("Y-m-d H:i:s");
   		
 
 		$sql = $bdd->prepare("INSERT INTO publication (Auteur, TextePublication, DatePublication) VALUES (?, ?, ?)");

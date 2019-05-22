@@ -16,10 +16,10 @@ $sql = $bdd->query('SELECT * FROM Publication ORDER BY DatePublication DESC');
 
 while($donnees = $sql->fetch()){
 	?>
-	<p> auteur : <?php echo $donnees['Auteur'];?></p>
-</br>
+	<div style="border : solid 1px">
+	<p> auteur : <?php echo $donnees['Auteur'];?>, publié le <?php echo $donnees['DatePublication'] ?></p>
 	<p>texte : <?php echo $donnees['TextePublication'];?></p>
-	
+	</div>
 <?php
 }
 
